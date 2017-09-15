@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="contract_all" type="id" />
+    <item name="contract_this_week" type="id" />
+    <item name="contract_next_week" type="id"/>
+</resources>

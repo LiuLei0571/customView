@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.join.util.CustomRingView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        custom:firstColor="#16A3FA"
+        custom:secondColor="#D20f20"
+        custom:speed="20"
+        custom:circleWidth="6dp"
+        custom:titleText="0%"
+        custom:titleSize="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

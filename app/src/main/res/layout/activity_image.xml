@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.join.util.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        custom:imageScaleType="center"
+        custom:image="@drawable/ic_launcher"
+        custom:titleText="Hello Lenny"
+        custom:titleTextColor="#f000"
+        android:layout_margin="10dp"
+        custom:titleTextSize="30sp" />
+
+    <com.example.join.util.CustomImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        custom:imageScaleType="center"
+        android:layout_margin="10dp"
+        custom:image="@drawable/ic_launcher"
+        custom:titleText="Hello！My name is  Lenny"
+        custom:titleTextColor="#f000"
+        custom:titleTextSize="20sp" />
+
+    <com.example.join.util.CustomImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        custom:imageScaleType="center"
+        android:layout_margin="10dp"
+        custom:image="@drawable/ic_launcher"
+        custom:titleText="Hello Lenny"
+        custom:titleTextColor="#f000"
+        custom:titleTextSize="20sp" />
+</LinearLayout>

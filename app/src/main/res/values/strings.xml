@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CustomViewTitle</string>
+    <string name="action_settings">Settings</string>
+    <string name="contract_all">全部</string>
+    <string name="contract_this_week">显示本周</string>
+    <string name="contract_next_week">显示下周</string>
+
+</resources>
