@@ -153,5 +153,12 @@ public class MainActivity extends Activity {
 
             }
         });
+        findViewById(R.id.btn_bubble).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, BubbleActivity.class));
+
+            }
+        });
     }
 }

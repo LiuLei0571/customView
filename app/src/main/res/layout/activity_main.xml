@@ -120,6 +120,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="viewgroup的触控" />
+            <Button
+                android:id="@+id/btn_bubble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="泡泡视图" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

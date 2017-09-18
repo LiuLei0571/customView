@@ -60,6 +60,7 @@
         <activity android:name="com.example.john.activity.RoundImageActivity" />
         <activity android:name="com.example.john.activity.TextWithImageActivity" />
         <activity android:name="com.example.john.activity.TouchSubActivity" />
+        <activity android:name="com.example.john.activity.BubbleActivity"/>
     </application>
 
 </manifest>

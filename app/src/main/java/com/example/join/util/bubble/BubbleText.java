@@ -1,8 +1,9 @@
-package com.example.join.util;
+package com.example.join.util.bubble;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.drawable.Drawable;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
@@ -16,7 +17,10 @@ import android.util.AttributeSet;
 
 public class BubbleText extends AppCompatTextView {
     Context mContext;
-    Drawable mDrawabe;
+    BubbleDrawabe mDrawabe;
+    RectF mRecf;
+    Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
     public BubbleText(Context context) {
         super(context, null);
     }
@@ -42,6 +46,26 @@ public class BubbleText extends AppCompatTextView {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
+    }
+
+    @Override
+    public void layout(int l, int t, int r, int b) {
+        super.layout(l, t, r, b);
+        setUp();
+    }
+
+    private void setUp() {
+        setUp(getWidth(), getHeight());
+    }
+
+    private void setUp(int width, int height) {
+        setUp(0, width, 0, height);
+    }
+
+    private void setUp(int left, int right, int top, int bottom) {
+        mRecf = new RectF(left, top, right, bottom);
+        mDrawabe = new BubbleDrawabe();
+        mDrawabe.setRectf(mRecf);
     }
 
     @Override
