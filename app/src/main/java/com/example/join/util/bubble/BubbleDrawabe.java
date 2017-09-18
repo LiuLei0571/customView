@@ -24,8 +24,9 @@ public class BubbleDrawabe extends Drawable {
     private RectF mRectf;
     private float mArrawWidth = 80;
     private float mArrowHeight = 30;
-    private float mArrowPosition;
+    private float mArrowPosition = 20;
     private int bubbleColor = Color.BLUE;
+    private boolean mArrworCenter;
     private float mRadius = 20;
     private Path mPath = new Path();
 
@@ -56,7 +57,9 @@ public class BubbleDrawabe extends Drawable {
 
     private void setUp(Canvas canvas) {
         mPaint.setColor(bubbleColor);
-        mArrowPosition = (mRectf.right - mRectf.left) / 2 - mArrawWidth / 2;
+        if (mArrworCenter) {
+            mArrowPosition = (mRectf.right - mRectf.left) / 2 - mArrawWidth / 2;
+        }
         mPath.moveTo(mRectf.left, mRectf.top);
         mPath.lineTo(mRectf.left + mArrowPosition, mRectf.top);
         mPath.lineTo(mRectf.left + mArrowPosition + mArrawWidth / 2, mRectf.top + mArrowHeight);
@@ -66,6 +69,6 @@ public class BubbleDrawabe extends Drawable {
         mPath.lineTo(mRectf.left, mRectf.bottom);
         mPath.lineTo(mRectf.left, mRectf.top);
         mPath.close();
-        canvas.drawPath(mPath,mPaint);
+        canvas.drawPath(mPath, mPaint);
     }
 }
