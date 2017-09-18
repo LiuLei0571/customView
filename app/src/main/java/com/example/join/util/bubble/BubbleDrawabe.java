@@ -22,12 +22,12 @@ import android.support.annotation.Nullable;
 public class BubbleDrawabe extends Drawable {
     private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private RectF mRectf;
-    private float mArrawWidth = 80;
+    private float mArrawWidth = 40;
     private float mArrowHeight = 30;
-    private float mArrowPosition = 20;
+    private float mArrowPosition = 30;
     private int bubbleColor = Color.BLUE;
     private boolean mArrworCenter;
-    private float mRadius = 20;
+    private float mRadius = 50;
     private Path mPath = new Path();
 
     public void setRectf(RectF rectf) {
@@ -60,14 +60,21 @@ public class BubbleDrawabe extends Drawable {
         if (mArrworCenter) {
             mArrowPosition = (mRectf.right - mRectf.left) / 2 - mArrawWidth / 2;
         }
-        mPath.moveTo(mRectf.left, mRectf.top);
-        mPath.lineTo(mRectf.left + mArrowPosition, mRectf.top);
-        mPath.lineTo(mRectf.left + mArrowPosition + mArrawWidth / 2, mRectf.top + mArrowHeight);
-        mPath.lineTo(mRectf.left + mArrowPosition + mArrawWidth, mRectf.top);
-        mPath.lineTo(mRectf.right, mRectf.top);
-        mPath.lineTo(mRectf.right, mRectf.bottom);
-        mPath.lineTo(mRectf.left, mRectf.bottom);
-        mPath.lineTo(mRectf.left, mRectf.top);
+        mPath.moveTo(mRectf.left+mRadius, mRectf.top + mArrowPosition);
+        mPath.lineTo(mRectf.left + mArrowPosition, mRectf.top + mArrowPosition);
+        mPath.lineTo(mRectf.left + mArrowPosition + mArrawWidth / 2, mRectf.top);
+        mPath.lineTo(mRectf.left + mArrowPosition + mArrawWidth, mRectf.top + mArrowPosition);
+        mPath.lineTo(mRectf.right - mRadius, mRectf.top + mArrowPosition);
+        mPath.arcTo(new RectF(mRectf.right - mRadius, mRectf.top + mArrowPosition, mRectf.right, mRectf.top + mArrowPosition+mRadius), 270, 90);
+        mPath.lineTo(mRectf.right, mRectf.bottom-mRadius);
+
+        mPath.arcTo(new RectF(mRectf.right-mRadius,mRectf.bottom-mRadius,mRectf.right,mRectf.bottom),0,90);
+        mPath.lineTo(mRectf.left+mRadius, mRectf.bottom);
+
+        mPath.arcTo(new RectF(mRectf.left,mRectf.bottom-mRadius,mRectf.left+mRadius,mRectf.bottom),90,90);
+        mPath.lineTo(mRectf.left, mRectf.top+mRadius+mArrowPosition);
+        mPath.arcTo(new RectF(mRectf.left,mRectf.top+mArrowPosition,mRectf.left+mRadius,mRectf.top+mArrowPosition+mRadius),180,90);
+
         mPath.close();
         canvas.drawPath(mPath, mPaint);
     }
