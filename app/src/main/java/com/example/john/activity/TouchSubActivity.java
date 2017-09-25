@@ -30,17 +30,37 @@ public class TouchSubActivity extends Activity {
         mBtnSub = (ButtonSub) findViewById(R.id.btn_sub);
     }
 
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//        boolean isT=false;
+//        switch (ev.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//                Log.d(TAG, TAG + "dispatchTouch--->action_down");
+////                isT=  true;
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                Log.d(TAG, TAG + "dispatchTouch--->action_up");
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                Log.d(TAG, TAG + "dispatchTouch--->action_move");
+//                break;
+//        }
+//        return isT;
+//    }
+
+
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "dispatchTouch--->action_down");
+                Log.d(TAG, "dispatchTouch--->action_down");
+//                isT=  true;
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "dispatchTouch--->action_up");
+                Log.d(TAG, "dispatchTouch--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "dispatchTouch--->action_move");
+                Log.d(TAG, "dispatchTouch--->action_move");
                 break;
         }
         return super.dispatchTouchEvent(ev);
@@ -50,15 +70,16 @@ public class TouchSubActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "onTouchEvent--->action_down");
+                Log.d(TAG, "onTouchEvent--->action_down");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "onTouchEvent--->action_up");
+                Log.d(TAG, "onTouchEvent--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "onTouchEvent--->action_move");
+                Log.d(TAG, "onTouchEvent--->action_move");
                 break;
         }
         return super.onTouchEvent(event);
     }
+
 }

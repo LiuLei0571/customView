@@ -1,12 +1,10 @@
 package com.example.join.util;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.Button;
-
-import static android.support.v7.widget.StaggeredGridLayoutManager.TAG;
 
 /**
  * 用途：
@@ -15,7 +13,7 @@ import static android.support.v7.widget.StaggeredGridLayoutManager.TAG;
  */
 
 
-public class ButtonSub extends Button {
+public class ButtonSub extends AppCompatButton {
     private String TAG = "ButtonSub";
 
     public ButtonSub(Context context) {
@@ -34,13 +32,16 @@ public class ButtonSub extends Button {
     public boolean dispatchTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_down");
+                Log.d(TAG,    "dispatchTouchEvent--->action_down");
+//                isT = true;
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_up");
+                Log.d(TAG,    "dispatchTouchEvent--->action_up");
+
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_move");
+
+                Log.d(TAG,    "dispatchTouchEvent--->action_move");
                 break;
         }
         return super.dispatchTouchEvent(event);
@@ -50,17 +51,16 @@ public class ButtonSub extends Button {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "onTouchEvent--->action_down");
+                Log.d(TAG,    "onTouchEvent--->action_down");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "onTouchEvent--->action_up");
+                Log.d(TAG,    "onTouchEvent--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "onTouchEvent--->action_move");
+                Log.d(TAG,    "onTouchEvent--->action_move");
                 break;
         }
-//        return super.onTouchEvent(event);//子控件消费了touch
-        return true;
+        return super.onTouchEvent(event);
+//    return false;
     }
-
 }

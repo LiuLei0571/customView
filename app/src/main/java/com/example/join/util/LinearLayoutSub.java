@@ -34,45 +34,62 @@ public class LinearLayoutSub extends LinearLayout {
     public boolean dispatchTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_down");
+                Log.d(TAG,    "dispatchTouchEvent--->action_down");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_up");
+                Log.d(TAG,    "dispatchTouchEvent--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "dispatchTouchEvent--->action_move");
+                Log.d(TAG,    "dispatchTouchEvent--->action_move");
                 break;
         }
         return super.dispatchTouchEvent(event);
     }
 
+//
+//    @Override
+//    public boolean onTouchEvent(MotionEvent event) {
+//        switch (event.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//                Log.d(TAG, TAG + "onTouchEvent--->action_down");
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                Log.d(TAG, TAG + "onTouchEvent--->action_up");
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                Log.d(TAG, TAG + "onTouchEvent--->action_move");
+//                break;
+//        }
+//        return true;
+//    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()) {
+                switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "onTouchEvent--->action_down");
+                Log.d(TAG,    "onTouchEvent--->action_down");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "onTouchEvent--->action_up");
+                Log.d(TAG,    "onTouchEvent--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "onTouchEvent--->action_move");
+                Log.d(TAG,    "onTouchEvent--->action_move");
                 break;
         }
-        return true;
+        return super.onTouchEvent(event);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, TAG + "onInterceptTouchEvent--->action_down");
+                Log.d(TAG,    "onInterceptTouchEvent--->action_down");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.d(TAG, TAG + "onInterceptTouchEvent--->action_up");
+                Log.d(TAG,    "onInterceptTouchEvent--->action_up");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, TAG + "onInterceptTouchEvent--->action_move");
+                Log.d(TAG,    "onInterceptTouchEvent--->action_move");
                 break;
         }
         return super.onInterceptTouchEvent(event);
