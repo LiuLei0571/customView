@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.john.customviewtitle.R;
+
 /**
  * 用途：
  * 作者：Created by liulei on 2017/9/28.
@@ -15,5 +17,6 @@ public class GroupPurchaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_group_purchase);
     }
 }
