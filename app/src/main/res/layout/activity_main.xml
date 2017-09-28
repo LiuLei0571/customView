@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffff"
-    android:orientation="vertical">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,73 +21,73 @@
                 android:id="@+id/btn_verification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定iview-验证码Demo" />
+                android:text="自定iview-验证码Demo"/>
 
             <Button
                 android:id="@+id/btn_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义view-图片Demo" />
+                android:text="自定义view-图片Demo"/>
 
             <Button
                 android:id="@+id/btn_ring"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义view-圆形进度条" />
+                android:text="自定义view-圆形进度条"/>
 
             <Button
                 android:id="@+id/btn_sound"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义view-音量控制器" />
+                android:text="自定义view-音量控制器"/>
 
             <Button
                 android:id="@+id/btn_view_tag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义viewGroup标签" />
+                android:text="自定义viewGroup标签"/>
 
             <Button
                 android:id="@+id/btn_view_pop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义浮动按钮" />
+                android:text="自定义浮动按钮"/>
 
             <Button
                 android:id="@+id/btn_view_swipeList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="viewpage轮播图" />
+                android:text="viewpage轮播图"/>
 
             <Button
                 android:id="@+id/taiji"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义旋转太极" />
+                android:text="自定义旋转太极"/>
 
             <Button
                 android:id="@+id/contacts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="获取联系人" />
+                android:text="获取联系人"/>
 
             <Button
                 android:id="@+id/paypassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="设置支付密码" />
+                android:text="设置支付密码"/>
 
             <Button
                 android:id="@+id/coordinatorLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="协调布局" />
+                android:text="协调布局"/>
 
             <Button
                 android:id="@+id/progressLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="进度条" />
+                android:text="进度条"/>
 
 
         </LinearLayout>
@@ -102,29 +102,37 @@
                 android:id="@+id/viewgroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewGroup_Demo" />
+                android:text="ViewGroup_Demo"/>
 
             <Button
                 android:id="@+id/view_round"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义圆角图片" />
+                android:text="自定义圆角图片"/>
 
             <Button
                 android:id="@+id/btn_text_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义组合显示隐藏图片" />
+                android:text="自定义组合显示隐藏图片"/>
+
             <Button
                 android:id="@+id/btn_touch_demo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="viewgroup的触控" />
+                android:text="viewgroup的触控"/>
+
             <Button
                 android:id="@+id/btn_bubble"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="泡泡视图" />
+                android:text="泡泡视图"/>
+
+            <Button
+                android:id="@+id/btn_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="抢购进度条"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

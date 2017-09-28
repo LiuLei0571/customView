@@ -61,6 +61,7 @@
         <activity android:name="com.example.john.activity.TextWithImageActivity" />
         <activity android:name="com.example.john.activity.TouchSubActivity" />
         <activity android:name="com.example.john.activity.BubbleActivity"/>
+        <activity android:name="com.example.john.activity.GroupPurchaseActivity"/>
     </application>
 
 </manifest>
