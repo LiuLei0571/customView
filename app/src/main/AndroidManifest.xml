@@ -18,7 +18,7 @@
         <receiver android:name="com.example.join.adapter.ImgAppWidgetProvider">
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/appwidget_provider_info">
+                android:resource="@xml/ds">
             </meta-data>
             <intent-filter>
                 <action android:name="cn.milk.androiddevartnote.action.click"/>
