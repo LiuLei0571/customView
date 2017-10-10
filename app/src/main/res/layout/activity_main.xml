@@ -133,6 +133,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="抢购进度条"/>
+
+            <Button
+                android:id="@+id/remote_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="remoteView的使用"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

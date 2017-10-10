@@ -166,5 +166,11 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this,GroupPurchaseActivity.class));
             }
         });
+        findViewById(R.id.remote_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RemoteViewActivity.class));
+            }
+        });
     }
 }

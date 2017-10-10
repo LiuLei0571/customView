@@ -62,6 +62,7 @@
         <activity android:name="com.example.john.activity.TouchSubActivity" />
         <activity android:name="com.example.john.activity.BubbleActivity"/>
         <activity android:name="com.example.john.activity.GroupPurchaseActivity"/>
+        <activity android:name="com.example.john.activity.RemoteViewActivity"/>
     </application>
 
 </manifest>
