@@ -1,65 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.john.customviewtitle">
+          package="com.example.john.customviewtitle">
     <!-- 读联系人权限 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!-- 写联系人权限 -->
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <!-- 拨号权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <!-- 读短信权限 -->
-    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver android:name="com.example.join.adapter.ImgAppWidgetProvider">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider_info">
+            </meta-data>
+            <intent-filter>
+                <action android:name="cn.milk.androiddevartnote.action.click"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.example.john.activity.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.john.activity.VerificationActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.ImageActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.CustomRingActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.CustomSoundActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.ViewGroupActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.PopCustomActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.SwipeListActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.ViewPagerActivity"
-            android:theme="@style/Anim_fade" />
+            android:theme="@style/Anim_fade"/>
         <activity
             android:name="com.example.john.activity.CustomTaijiActivity"
-            android:theme="@style/Anim_fade" />
-        <activity android:name="com.example.john.activity.ContactActivity" />
-        <activity android:name="com.example.john.activity.SelectContactActivity" />
-        <activity android:name="com.example.john.activity.PayPasswordChangeActivity" />
-        <activity android:name="com.example.john.activity.StickActivity" />
-        <activity android:name="com.example.john.activity.CustomProgressActivity" />
-        <activity android:name="com.example.john.activity.ViewGroupDemoActivity" />
-        <activity android:name="com.example.john.activity.RoundImageActivity" />
-        <activity android:name="com.example.john.activity.TextWithImageActivity" />
-        <activity android:name="com.example.john.activity.TouchSubActivity" />
+            android:theme="@style/Anim_fade"/>
+        <activity android:name="com.example.john.activity.ContactActivity"/>
+        <activity android:name="com.example.john.activity.SelectContactActivity"/>
+        <activity android:name="com.example.john.activity.PayPasswordChangeActivity"/>
+        <activity android:name="com.example.john.activity.StickActivity"/>
+        <activity android:name="com.example.john.activity.CustomProgressActivity"/>
+        <activity android:name="com.example.john.activity.ViewGroupDemoActivity"/>
+        <activity android:name="com.example.john.activity.RoundImageActivity"/>
+        <activity android:name="com.example.john.activity.TextWithImageActivity"/>
+        <activity android:name="com.example.john.activity.TouchSubActivity"/>
         <activity android:name="com.example.john.activity.BubbleActivity"/>
         <activity android:name="com.example.john.activity.GroupPurchaseActivity"/>
         <activity android:name="com.example.john.activity.RemoteViewActivity"/>

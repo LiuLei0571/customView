@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -35,8 +36,8 @@ public class RemoteViewActivity extends AppCompatActivity {
         final PendingIntent mPendingIntent1 = PendingIntent.getActivity(RemoteViewActivity.this, 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
         Intent intent2 = new Intent(RemoteViewActivity.this, RemoteViewActivity.class);
         final PendingIntent mPendingIntent2 = PendingIntent.getActivity(RemoteViewActivity.this, 0, intent2, PendingIntent.FLAG_UPDATE_CURRENT);
-        remoteViews.setOnClickPendingIntent(R.id.btn_home,mPendingIntent1);
-        remoteViews.setOnClickPendingIntent(R.id.btn_now,mPendingIntent2);
+        remoteViews.setOnClickPendingIntent(R.id.btn_home, mPendingIntent1);
+        remoteViews.setOnClickPendingIntent(R.id.btn_now, mPendingIntent2);
 
         findViewById(R.id.btn_toast).setOnClickListener(new View.OnClickListener() {
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -53,10 +54,17 @@ public class RemoteViewActivity extends AppCompatActivity {
 
             }
         });
+        findViewById(R.id.btn_widget_provider).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        Log.d("", "");
     }
 }

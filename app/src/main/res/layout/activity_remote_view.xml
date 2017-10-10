@@ -9,4 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="弹出notification"/>
+    <Button
+        android:id="@+id/btn_widget_provider"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="桌面小部件"/>
 </LinearLayout>
