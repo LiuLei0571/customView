@@ -18,30 +18,38 @@ import com.example.john.customviewtitle.R;
 
 
 public class ImgAppWidgetProvider extends AppWidgetProvider {
-    public static final String CLICK_ACTION = "cn.milk.androiddevartnote.action.click";
+    public static final String TAG = "ImgAppWidgetProvider";
+    public static final String CLICK_ACTION = "cn.hudp.androiddevartnote.action.click";
     private static int index;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        if (CLICK_ACTION.equals(intent.getAction())) {
+        if (intent.getAction().equals(CLICK_ACTION)) {
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_provider);
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            updateView(context, remoteViews, appWidgetManager);
 
+            updateView(context, remoteViews, appWidgetManager);
         }
     }
 
+    @Override
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        super.onUpdate(context, appWidgetManager, appWidgetIds);
+        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_provider);
+
+        updateView(context, remoteViews, appWidgetManager);
+    }
+
+    // 由于onReceive 和 onUpdate中部分代码相同 则抽成一个公用方法
     public void updateView(Context context, RemoteViews remoteViews, AppWidgetManager appWidgetManager) {
-        index= (int) (Math.random()*3);
-        if (index==1){
-            remoteViews.setImageViewResource(R.id.iv_demo,R.drawable.a);
-        }else if(index==2){
-            remoteViews.setImageViewResource(R.id.iv_demo,R.drawable.b);
-
-        }else {
-            remoteViews.setImageViewResource(R.id.iv_demo,R.drawable.c);
-
+        index = (int) (Math.random() * 3);
+        if (index == 1) {
+            remoteViews.setImageViewResource(R.id.iv, R.drawable.a);
+        } else if (index == 2) {
+            remoteViews.setImageViewResource(R.id.iv, R.drawable.a);
+        } else {
+            remoteViews.setImageViewResource(R.id.iv, R.drawable.a);
         }
         Intent clickIntent = new Intent();
         clickIntent.setAction(CLICK_ACTION);
@@ -50,10 +58,5 @@ public class ImgAppWidgetProvider extends AppWidgetProvider {
         appWidgetManager.updateAppWidget(new ComponentName(context, ImgAppWidgetProvider.class), remoteViews);
     }
 
-    @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        super.onUpdate(context, appWidgetManager, appWidgetIds);
-        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_provider);
-        updateView(context, remoteViews, appWidgetManager);
-    }
+
 }
